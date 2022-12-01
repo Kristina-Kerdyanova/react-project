@@ -1,20 +1,18 @@
-<<<<<<< HEAD
-import { CardItem } from "./components/CardItem/CardItem";
-
-function App() {
-  return (
-    <CardItem/>
-  );
-=======
-import { Header } from "./components/Header/Header";
-
 import React from 'react'
+import { HashRouter } from 'react-router-dom';
+import { AppRouter } from './router/AppRouter';
+import { GlobalStyle } from './ui/GlobalStyle';
+
 
 export const App = () => {
   return (
-    <Header/>
+    <>
+    <GlobalStyle />
+    <HashRouter>
+      <AppRouter />
+    </HashRouter>
+    </>
   )
->>>>>>> f5839953fdd9c265fa21778d9b4e015529aa1b64
 }
 
 export default App;
