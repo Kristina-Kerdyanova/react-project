@@ -4,7 +4,6 @@ import Instagram from "../../assets/icons/instagram.svg";
 import Viber from "../../assets/icons/viber.svg";
 import Telegram from "../../assets/icons/telegram.svg";
 import Youtube from "../../assets/icons/youtube.svg";
-import "./style.css";
 import { ContainerSocial, StyledForm, StyledInput, StyledLink, StyledSubcribe, SubscribeButton, SubscribeContainer, SubscribeText } from "./style";
 
 export const Subscribe = () => {

@@ -9,7 +9,6 @@ const StyledSubcribe = styled.div`
   @media (max-width: 1000px) {
     padding: 32px 0 36px;
   }
-
 `;
 
 const SubscribeContainer = styled.div`
@@ -64,6 +63,13 @@ const StyledInput = styled.input`
   background-color: rgba(119, 33, 193, 0);
   padding-left: 26px;
   color: rgba(119, 33, 193, 0.75);
+  &::placeholder {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(119, 33, 193, 0.75);
+  }
 `;
 
 const SubscribeButton = styled.button`
