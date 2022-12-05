@@ -1,23 +1,58 @@
-import React from 'react'
-import { StyledCardItem, StyledHintHitTitleCardItem, StyledHintNewTitleCardItem, StyledIconsCardItem, StyledLinkCardItem, StyledMainPriceCardItem, StyledOldPriceCardItem, StyledPriceCardItem, StyledStartsCardItem, StyledTitleCardItem } from './style'
+import React from "react";
+import sofa from "../../assets/images/sofa.png";
+import star from "../../assets/icons/star.svg";
+import { Order } from "../Order/Order";
+import {
+  StyledCardImgBox,
+  StyledCardInfo,
+  StyledCardItem,
+  StyledCardSale,
+  StyledCardSaleText,
+  StyledHintHitTitleCardItem,
+  StyledHintNewTitleCardItem,
+  StyledIconsCardItem,
+  StyledLinkCardItem,
+  StyledMainPriceCardItem,
+  StyledOldPriceCardItem,
+  StyledPriceCardItem,
+  StyledStartsCardItem,
+  StyledTitleCardItem,
+} from "./style";
 
 export const CardItem = () => {
   return (
     <StyledCardItem>
-      <StyledTitleCardItem>
-      Трёхместный диван Claudia
-        <StyledHintHitTitleCardItem>Новинка</StyledHintHitTitleCardItem>
-        <StyledHintNewTitleCardItem>ХИТ</StyledHintNewTitleCardItem>
-      </StyledTitleCardItem>
+      <StyledCardImgBox>
+        <img src={sofa} alt="sofa" />
+      </StyledCardImgBox>
+      <StyledCardSale>
+        <StyledCardSaleText>Акция -10%</StyledCardSaleText>
+      </StyledCardSale>
+      <StyledCardInfo>
+        <StyledTitleCardItem>
+          Трёхместный диван Claudia
+          <StyledHintNewTitleCardItem>Новинка</StyledHintNewTitleCardItem>
+          <StyledHintHitTitleCardItem>ХИТ</StyledHintHitTitleCardItem>
+        </StyledTitleCardItem>
 
-      <StyledPriceCardItem>
-        <StyledMainPriceCardItem>43047 руб</StyledMainPriceCardItem>
-        <StyledOldPriceCardItem>46790 руб</StyledOldPriceCardItem>
-      </StyledPriceCardItem>
-      <StyledStartsCardItem></StyledStartsCardItem>
-      
-      <StyledLinkCardItem>Подробнее</StyledLinkCardItem>
-      <StyledIconsCardItem></StyledIconsCardItem>
+        <StyledPriceCardItem>
+          <StyledMainPriceCardItem>43047 руб</StyledMainPriceCardItem>
+          <StyledOldPriceCardItem>46790 руб</StyledOldPriceCardItem>
+        </StyledPriceCardItem>
+        <StyledStartsCardItem>
+          <img src={star} alt="star" />
+          <img src={star} alt="star" />
+          <img src={star} alt="star" />
+          <img src={star} alt="star" />
+          <img src={star} alt="star" />
+        </StyledStartsCardItem>
+
+        <StyledLinkCardItem>Подробнее</StyledLinkCardItem>
+      </StyledCardInfo>
+
+      <StyledIconsCardItem>
+        <Order></Order>
+      </StyledIconsCardItem>
     </StyledCardItem>
-  )
-}
+  );
+};
