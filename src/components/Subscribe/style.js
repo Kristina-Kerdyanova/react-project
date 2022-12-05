@@ -65,6 +65,8 @@ const SubscribeButton = styled.button`
   padding: 11px 21px;
 `;
 
+const StyledLink = styled.a``;
+
 export {
   StyledForm,
   StyledInput,
@@ -73,4 +75,5 @@ export {
   SubscribeContainer,
   ContainerSocial,
   SubscribeText,
+  StyledLink
 };
