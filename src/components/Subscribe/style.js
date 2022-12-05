@@ -6,6 +6,10 @@ const StyledSubcribe = styled.div`
   margin: auto;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: inset 0px 4px 36px rgba(0, 0, 0, 0.25);
+  @media (max-width: 1000px) {
+    padding: 32px 0 36px;
+  }
+
 `;
 
 const SubscribeContainer = styled.div`
@@ -17,6 +21,10 @@ const SubscribeContainer = styled.div`
   width: 100%;
   margin: auto;
   color: #7721c1;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const ContainerSocial = styled.div`
@@ -25,6 +33,9 @@ const ContainerSocial = styled.div`
   align-items: center;
   max-width: 315px;
   width: 100%;
+  @media (max-width: 1000px) {
+    margin-bottom: 30px;
+  }
 `;
 
 const SubscribeText = styled.p`
@@ -34,6 +45,10 @@ const SubscribeText = styled.p`
   font-weight: 700;
   font-size: 20px;
   line-height: 133.2%;
+  @media (max-width: 1000px) {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 `;
 
 const StyledForm = styled.form`
@@ -75,5 +90,5 @@ export {
   SubscribeContainer,
   ContainerSocial,
   SubscribeText,
-  StyledLink
+  StyledLink,
 };
