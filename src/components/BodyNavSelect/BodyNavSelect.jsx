@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import {
-  StyledBodyNavBorder,
   StyledBodyNavEllements,
   StyledBodyNavHead,
-  StyledBodyNavHover,
   StyledBodyNavSell,
   StyledBodyNavText,
   StyledBodyNavWrapper,
 } from "./style";
 import "./style.css";
 import { BodyLine } from "../BodyLine/BodyLine";
-import { ButtonNavigation } from "../NavigationBar/style";
 import { CardItem } from "../CardItem/CardItem";
 export const BodyNavSelect = () => {
   const tabs = [

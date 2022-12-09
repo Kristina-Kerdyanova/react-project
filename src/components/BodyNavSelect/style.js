@@ -20,6 +20,7 @@ align-items: center;
 const StyledBodyNavEllements = styled.div`
 display: flex;
 gap: 40px;
+
 `
 
 const StyledBodyNavSell = styled.button`
@@ -31,6 +32,7 @@ border-radius: 31px;
 padding: 7px 12px;
 transition: .7s;
 background: #fff;
+
 &:active{
     border: 3px solid #7721C1;
 }
