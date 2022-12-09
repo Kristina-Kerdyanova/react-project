@@ -5,6 +5,7 @@ display: flex;
 flex-direction: column;
 max-width: 1140px;
 width: 100%;
+margin: 0 auto;
 `
 
 const StyledBodyNavHead = styled.h2`
@@ -41,7 +42,6 @@ border: 3px solid #7721C1;
 const StyledBodyNavText = styled.div`
 display: flex;
 justify-content: space-between;
-margin-bottom: 15px;
 `
 const StyledBodyNavBorder = styled.div`
 background: #FFFFFF;

@@ -2,6 +2,7 @@ import React from "react";
 import { StyledBodyNavBorder, StyledBodyNavHead } from "../BodyNavSelect/style";
 import { BodyNews } from "../BodyNews/BodyNews";
 import { NavigationBar } from "../NavigationBar/NavigationBar";
+import { BodyLine } from "../BodyLine/BodyLine";
 import {
   StyledNewsContainer,
   StyledNewsContent,
@@ -16,7 +17,8 @@ export const News = () => {
         <StyledNewsHeader>
           <StyledBodyNavHead>Последние новости</StyledBodyNavHead>
         </StyledNewsHeader>
-        <StyledBodyNavBorder></StyledBodyNavBorder>
+        {/* <StyledBodyNavBorder></StyledBodyNavBorder> */}
+        <BodyLine></BodyLine>
         <StyledNewsContent>
           <BodyNews></BodyNews>
           <BodyNews></BodyNews>

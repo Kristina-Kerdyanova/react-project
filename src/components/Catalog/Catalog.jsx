@@ -4,7 +4,7 @@ import rehau from "../../assets/images/rehau.svg";
 import veka from "../../assets/images/veka.svg";
 import { StyledBodyNavBorder, StyledBodyNavEllements, StyledBodyNavHead, StyledBodyNavHover, StyledBodyNavSell, StyledBodyNavText, StyledBodyNavWrapper } from '../BodyNavSelect/style'
 import { StyledCatalog, StyledCatalogCard, StyledCatalogWrapper } from './style';
-
+import {BodyLine} from '../BodyLine/BodyLine'
 export const Catalog = () =>{
 
     return(
@@ -30,8 +30,8 @@ export const Catalog = () =>{
                 <StyledBodyNavSell>Натяжные потолки</StyledBodyNavSell>
             </StyledBodyNavEllements>
             </StyledBodyNavText>
-            <StyledBodyNavBorder></StyledBodyNavBorder>
-
+            {/* <StyledBodyNavBorder></StyledBodyNavBorder> */}
+            <BodyLine></BodyLine>
 
         </StyledBodyNavWrapper>
 

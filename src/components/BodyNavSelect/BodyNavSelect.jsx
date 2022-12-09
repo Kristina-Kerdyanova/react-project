@@ -9,6 +9,7 @@ import {
   StyledBodyNavWrapper,
 } from "./style";
 import "./style.css";
+import { BodyLine } from "../BodyLine/BodyLine";
 import { ButtonNavigation } from "../NavigationBar/style";
 import { CardItem } from "../CardItem/CardItem";
 export const BodyNavSelect = () => {
@@ -45,8 +46,9 @@ export const BodyNavSelect = () => {
           ))}
         </StyledBodyNavEllements>
       </StyledBodyNavText>
+    <BodyLine></BodyLine>
+      {/* <StyledBodyNavBorder></StyledBodyNavBorder> */}
 
-      <StyledBodyNavBorder></StyledBodyNavBorder>
       {tabs[active] && <TabContent {...tabs[active]} />}
     </StyledBodyNavWrapper>
   );
