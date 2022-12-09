@@ -9,7 +9,7 @@ export const Header = () => {
     <StyledHeader>
       <Subheader />
       <Navigation/>
-      {/* <NavigationBar/> */}
+      <NavigationBar/>
     </StyledHeader>
   )
 }
