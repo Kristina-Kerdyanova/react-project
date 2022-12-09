@@ -5,11 +5,13 @@ display: flex;
 justify-content: space-evenly;
 width: 100%;
 `
-const OrderAddCard = styled.div`
+const OrderAddCard = styled.button`
 display: flex;
 position: relative;
 width: 82px;
 align-items: center;
+border: none;
+background: none;
 `
 const OrderPlus = styled.div `
 background: #FFFFFF;
@@ -32,9 +34,14 @@ justify-content: flex-end;
 padding-right: 12px;
 min-height: 90%;
 `
+const OrderBtn = styled.button`
+border: none;
+background: none;
+`
 export {
     OrderBox,
     OrderAddCard,
     OrderPlus,
     OrderCart,
+    OrderBtn
 }
