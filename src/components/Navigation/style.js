@@ -6,6 +6,7 @@ const StyledNavigation = styled.div`
   margin: auto;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 24px;
 `;
 
 const StyledNavigationForm = styled.form`
@@ -22,6 +23,14 @@ const StyledNavigationForm = styled.form`
 const StyledNavigationInput = styled.input`
   border: solid 0px;
   background-color: rgba(119, 33, 193, 0);
+  &::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: rgba(119, 33, 193, 0.71);
+  }
 `;
 
 const StyledNavigationBtnSearch = styled.button`
@@ -68,7 +77,6 @@ const StyledNavigationBtnCart = styled.button`
   background: rgba(119, 33, 193, 0);
 `;
 
-
 // const StyledNavigationSelect = styled.select`
 //   max-width: 151px;
 //   width: 100%;
@@ -85,7 +93,6 @@ const StyledNavigationBtnCart = styled.button`
 //   font-size: 15px;
 //   line-height: 18px;
 // `;
-
 
 export {
   StyledNavigation,
