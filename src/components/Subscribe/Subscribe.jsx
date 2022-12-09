@@ -21,7 +21,7 @@ export const Subscribe = () => {
           Подпишитесь и будьте в курсе! Акции, скидки, распродажи ждут!
         </SubscribeText>
         <StyledForm>
-          <StyledInput className="placeholder" type="email" placeholder="Ведите e-mail адрес" />
+          <StyledInput type="email" placeholder="Ведите e-mail адрес" />
           <SubscribeButton>Подписаться</SubscribeButton>
         </StyledForm>
       </SubscribeContainer>

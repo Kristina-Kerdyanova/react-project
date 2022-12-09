@@ -1,13 +1,14 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Header } from '../components/Header/Header'
-import { MainTemplate } from '../components/MainTemplate/MainTemplate'
+import { News } from '../components/News/News'
+import { Catalog } from '../components/Catalog/Catalog'
+import { BodyNavSelect } from '../components/BodyNavSelect/BodyNavSelect'
 
 export const AppRouter = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainTemplate/>} />
-      <Route index element={<Header/>}/>
+      <Route path="/" element={<BodyNavSelect/>} />
+      
     </Routes>
   )
 }
