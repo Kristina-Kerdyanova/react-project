@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 max-width: 1140px;
 width: 100%;
-margin: 0 auto;
+margin: 0 auto 97px;
 `
 
 const StyledBodyNavHead = styled.h2`

@@ -11,7 +11,7 @@ import { BodyLine } from "../BodyLine/BodyLine";
 import { CardItem } from "../CardItem/CardItem";
 export const BodyNavSelect = () => {
   const tabs = [
-    { title: "Диваны / Кровати", content: <CardItem></CardItem> },
+    { title: "Диваны / Кровати", content: <CardItem></CardItem>},
     { title: "Двери", content: "Двери" },
     { title: "Окна", content: "Окна" },
     { title: "Мебeль", content: "Мебeль" },
