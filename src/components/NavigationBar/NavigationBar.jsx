@@ -1,6 +1,6 @@
-import React from 'react'
-import { ButtonNavigation, ButtonTabNavigation, ButtonTitle, CategoriesList, CategoriesListItem, ContainerBody, ContainerContent, ContainerLink, ContainerNavigation, ContainerNavigationBar, ContainerTabNavigation, ContainerTabsContent, LinkItem, ListText, StyledLink, StyledNavigationBar, TabItem, TextLink, TitleLink } from './style';
-import './style.css';
+import React from "react"
+import { ButtonNavigation, ButtonTabNavigation, ButtonTitle, CategoriesList, CategoriesListItem, ContainerBody, ContainerContent, ContainerLink, ContainerNavigation, ContainerNavigationBar, ContainerTabNavigation, ContainerTabsContent, LinkItem, ListLink, ListText, StyledLink, StyledNavigationBar, TabItem, TextLink, TitleLink } from "./style";
+import "./style.css";
 import Lamp from "../../assets/icons/lamp.svg"
 import Window from "../../assets/icons/window.svg"
 import Burger from "../../assets/icons/burger.svg"
@@ -11,17 +11,32 @@ import Sofas from "../../assets/icons/sofas.svg"
 import Lamp_small from "../../assets/icons/lamp_small.svg"
 import Doors from "../../assets/icons/doors.svg"
 import Window_small from "../../assets/icons/window_small.svg"
-import { StyledLine } from '../BodyLine/style';
 
 
 export const NavigationBar = () => {
   const tabs = [
-    { title: 'Горячие предложения', content: 'Тут будут горячие предложения' },
-    { title: 'Акции', content: 'Тут могла бы быть Ваша акция' },
-    { title: 'Новинки', content: 'Новинки' },
+    { title: "Горячие предложения", content: "Тут будут горячие предложения" },
+    { title: "Акции", content: "Тут могла бы быть Ваша акция" },
+    { title: "Новинки", content: "Новинки" },
   ];
 
-  const TabContent = ({ title, content }) => (
+  const categories = [
+    { title: "Двери", img: Doors },
+    { title: "Окна", img: Window_small },
+    { title: "Натяжные потолки", img: Lamp_small },
+    { title: "Диваны/Кровати", img: Sofas },
+    { title: "Жалюзи/Ролеты", img: Blinds },
+    { title: "Мебель", img: Chairs },
+    { title: "Кованые изделия", img: Forged_products },
+    { title: "Другие", img: "" },
+  ]
+
+  const calculator = [
+    { title: "Калькулятор", content: "Окон", img: Window, link: "" },
+    { title: "Калькулятор", content: "Натяжных потолков", img: Lamp, link: "" },
+  ];
+
+  const TabContent = ({ content }) => (
     <div className="tabcontent">
       <p>{content}</p>
     </div>
@@ -42,66 +57,35 @@ export const NavigationBar = () => {
           <TabItem className="tab">
             {tabs.map((item, index) => (
               <ButtonTabNavigation
-                className={`tablinks ${index === active ? 'active' : ''}`}
+                className={`tablinks ${index === active ? "active" : ""}`}
                 onClick={openTab}
                 data-index={index}>
                 {item.title}
               </ButtonTabNavigation>
             ))}
           </TabItem>
-          <ContainerLink>
-            <LinkItem>
-              <StyledLink href=''> <img src={Window} alt="" />
-                <ContainerContent>
-                  <TextLink>Калькулятор</TextLink>
-                  <TitleLink>Окон</TitleLink>
-                </ContainerContent>
-              </StyledLink>
-            </LinkItem>
-            <LinkItem>
-              <StyledLink href=''> <img src={Lamp} alt="" />
-                <ContainerContent>
-                  <TextLink>Калькулятор</TextLink>
-                  <TitleLink>Натяжных потолков</TitleLink>
-                </ContainerContent>
-              </StyledLink>
-            </LinkItem>
-          </ContainerLink>
+          <ListLink>
+            {calculator.map((item) => (
+              <LinkItem>
+                <StyledLink href={item.link}> <img src={item.img} alt="" />
+                  <ContainerContent>
+                    <TextLink>{item.title}</TextLink>
+                    <TitleLink>{item.content}</TitleLink>
+                  </ContainerContent>
+                </StyledLink>
+              </LinkItem>
+            ))}
+          </ListLink>
         </StyledNavigationBar>
       </ContainerNavigationBar>
       <ContainerBody>
         <CategoriesList>
-          <CategoriesListItem>
-            <img src={Doors} alt="" />
-            <ListText>Двери</ListText>
-          </CategoriesListItem>
-          <CategoriesListItem>
-            <img src={Window_small} alt="" />
-            <ListText>Окна</ListText>
-          </CategoriesListItem>
-          <CategoriesListItem>
-            <img src={Lamp_small} alt="" />
-            <ListText>Натяжные потолки</ListText>
-          </CategoriesListItem>
-          <CategoriesListItem>
-            <img src={Sofas} alt="" />
-            <ListText>Диваны/Кровати</ListText>
-          </CategoriesListItem>
-          <CategoriesListItem>
-            <img src={Blinds} alt="" />
-            <ListText>Жалюзи / Ролеты</ListText>
-          </CategoriesListItem>
-          <CategoriesListItem>
-            <img src={Chairs} alt="" />
-            <ListText>Мебель</ListText>
-          </CategoriesListItem>
-          <CategoriesListItem>
-            <img src={Forged_products} alt="" />
-            <ListText>Кованые изделия</ListText>
-          </CategoriesListItem>
-          <CategoriesListItem>
-            <ListText>Другие</ListText>
-          </CategoriesListItem>
+          {categories.map((item) => (
+            <CategoriesListItem>
+              <img src={item.img} alt="" />
+              <ListText> {item.title} </ListText>
+            </CategoriesListItem>
+          ))}
         </CategoriesList>
         <ContainerTabsContent>
           {tabs[active] && <TabContent {...tabs[active]} />}

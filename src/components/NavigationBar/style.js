@@ -119,14 +119,14 @@ const TitleLink = styled.p`
   line-height: 85.6%;
 `;
 
-const ContainerLink = styled.div`
+const ListLink = styled.ul`
   display: flex;
   justify-content: space-around;
   max-width: 377px;
   width: 100%;
 `;
 
-const LinkItem = styled.div`
+const LinkItem = styled.li`
   max-width: 166px;
   width: 100%;
 `;
@@ -182,7 +182,7 @@ export {
   ContainerContent,
   TextLink,
   TitleLink,
-  ContainerLink,
+  ListLink,
   LinkItem,
   ContainerNavigationBar,
   ButtonTitle,
