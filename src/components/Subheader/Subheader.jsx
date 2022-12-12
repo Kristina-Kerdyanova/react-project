@@ -2,21 +2,17 @@ import React from 'react'
 import ArrowToDown from "../../assets/icons/arrow_to_down.svg";
 import { StyledSubheader, StyledSubheaderBlock, StyledSubheaderContainer, StyledSubheaderElement, StyledSubheaderElementContainer, StyledSubheaderText, StyledSubheaderTextBold } from './style'
 import { SubheaderAuthorization } from '../SubheaderAuthorization/SubheaderAuthorization';
-import { SubheaderMap } from '../SubheaderMap/SubheaderMap';
+import { HeaderSelect } from '../HeaderSelect/HeaderSelect';
 
 export const Subheader = () => {
   return (
     <StyledSubheader>
       <StyledSubheaderContainer>
         <SubheaderAuthorization/>
-        <SubheaderMap/>
+        <HeaderSelect/>
         <StyledSubheaderBlock>
           <StyledSubheaderElement>
-            <StyledSubheaderElementContainer>
-              <StyledSubheaderTextBold>Язык</StyledSubheaderTextBold>
-              <StyledSubheaderText>Русский</StyledSubheaderText>
-            </StyledSubheaderElementContainer>
-            <img src={ArrowToDown} alt="arrow to down" />
+            <HeaderSelect/>
           </StyledSubheaderElement>
           <StyledSubheaderElement>
             <StyledSubheaderElementContainer>
