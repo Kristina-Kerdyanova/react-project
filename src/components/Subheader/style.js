@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const StyledSubheader = styled.div`
   min-width: 1440px;
   width: 100%;
@@ -22,6 +21,8 @@ const StyledSubheaderContainer = styled.div`
 
 const StyledSubheaderElement = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -42,13 +43,22 @@ const StyledSubheaderElementContainer = styled.div`
 const StyledSubheaderText = styled.p`
   font-size: 13px;
   font-weight: 500;
-  color: #7721C1;
+  color: #7721c1;
 `;
 
 const StyledSubheaderTextBold = styled.h4`
   font-size: 12px;
-  color: #7721C1;
+  color: #7721c1;
   margin: 0 8px;
+`;
+
+const HeaderSelectTitle = styled.p`
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7721c1;
 `;
 
 export {
@@ -59,4 +69,5 @@ export {
   StyledSubheaderElementContainer,
   StyledSubheaderText,
   StyledSubheaderTextBold,
+  HeaderSelectTitle,
 };
