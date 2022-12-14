@@ -2,7 +2,7 @@ import React from 'react';
 import wds from "../../assets/images/wds.svg";
 import rehau from "../../assets/images/rehau.svg";
 import veka from "../../assets/images/veka.svg";
-import { StyledBodyNavBorder, StyledBodyNavEllements, StyledBodyNavHead, StyledBodyNavHover, StyledBodyNavSell, StyledBodyNavText, StyledBodyNavWrapper } from '../BodyNavSelect/style'
+import { StyledBodyNavEllements, StyledBodyNavHead, StyledBodyNavSell, StyledBodyNavText, StyledBodyNavWrapper } from '../BodyNavSelect/style'
 import { StyledCatalog, StyledCatalogCard, StyledCatalogWrapper } from './style';
 import { BodyLine } from '../BodyLine/BodyLine'
 export const Catalog = () => {
