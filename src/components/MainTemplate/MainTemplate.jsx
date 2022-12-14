@@ -6,9 +6,9 @@ import { StyledMainTemplate } from './style'
 export const MainTemplate = () => {
   return (
     <StyledMainTemplate>
-        <Header />
-        <Outlet />
-        {/* <Footer /> */}
-</StyledMainTemplate>
+      <Header />
+      <Outlet />
+      {/* <Footer /> */}
+    </StyledMainTemplate>
   )
 }
