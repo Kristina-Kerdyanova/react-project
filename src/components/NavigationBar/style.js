@@ -70,7 +70,6 @@ const StyledNavigationBar = styled.div`
   max-width: 1140px;
   width: 100%;
   min-height: 71px;
-
   background: none;
 `;
 
@@ -149,10 +148,45 @@ const CategoriesListItem = styled.div`
   display: flex;
   max-width: 197px;
   width: 100%;
-  min-height: 33.5px;
 `;
 
-const ListText = styled.p``;
+const ContainerListItem = styled.div`
+  display: flex;
+  max-width: 197px;
+  width: 100%;
+  margin: auto;
+  /* &::after {
+    content: "";
+    display: block;
+    width: 197px;
+    height: 3.8px;
+    background: #ffffff;
+    box-shadow: inset 0px 4px 13px rgba(119, 33, 193, 0.62);
+    border-radius: 12px;
+  } */
+`;
+
+const ContainerList = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 197px;
+  min-height: 403px;
+  width: 100%;
+  margin: auto;
+`;
+
+const ListText = styled.p`
+  margin-left: 21px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  color: #7721c1;
+  opacity: 0.75;
+`;
 
 const ContainerBody = styled.div`
   display: flex;
@@ -186,4 +220,6 @@ export {
   LinkItem,
   ContainerNavigationBar,
   ButtonTitle,
+  ContainerListItem,
+  ContainerList,
 };
