@@ -1,5 +1,5 @@
 import React from "react"
-import { ButtonNavigation, ButtonTabNavigation, ButtonTitle, CategoriesList, CategoriesListItem, ContainerBody, ContainerContent, ContainerLink, ContainerNavigation, ContainerNavigationBar, ContainerTabNavigation, ContainerTabsContent, LinkItem, ListLink, ListText, StyledLink, StyledNavigationBar, TabItem, TextLink, TitleLink } from "./style";
+import { ButtonNavigation, ButtonTabNavigation, ButtonTitle, CategoriesList, CategoriesListItem, ContainerBody, ContainerContent, ContainerLink, ContainerList, ContainerListItem, ContainerNavigation, ContainerNavigationBar, ContainerTabNavigation, ContainerTabsContent, LinkItem, ListLink, ListText, StyledLink, StyledNavigationBar, TabItem, TextLink, TitleLink } from "./style";
 import "./style.css";
 import Lamp from "../../assets/icons/lamp.svg"
 import Window from "../../assets/icons/window.svg"
@@ -37,7 +37,7 @@ export const NavigationBar = () => {
   ];
 
   const TabContent = ({ content }) => (
-    <div className="tabcontent">
+    <div className="tab_content">
       <p>{content}</p>
     </div>
   );
@@ -80,12 +80,16 @@ export const NavigationBar = () => {
       </ContainerNavigationBar>
       <ContainerBody>
         <CategoriesList>
+          <ContainerList>
           {categories.map((item) => (
             <CategoriesListItem>
-              <img src={item.img} alt="" />
-              <ListText> {item.title} </ListText>
+              <ContainerListItem>
+                <img src={item.img} alt="" />
+                <ListText> {item.title} </ListText>
+              </ContainerListItem>
             </CategoriesListItem>
           ))}
+          </ContainerList>
         </CategoriesList>
         <ContainerTabsContent>
           {tabs[active] && <TabContent {...tabs[active]} />}
