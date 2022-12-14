@@ -2,10 +2,10 @@ import React from "react";
 import { StyledBodyNavHead } from "../BodyNavSelect/style";
 import bigstar from "../../assets/icons/big_star.svg"
 import {
-    StyledHotestAvalible,
+  StyledDetailsItem,
+  StyledHotestAvalible,
   StyledHotestAvalibleText,
   StyledHotestContainer,
-  StyledHotestContent,
   StyledHotestHeader,
   StyledHotestLable,
   StyledHotestLableContent,
@@ -14,7 +14,6 @@ import {
   StyledHotestLableYellow,
   StyledHotestLeft,
   StyledHotestLine,
-  StyledHotestPrefer,
   StyledHotestPrice,
   StyledHotestPriceMain,
   StyledHotestPriceOld,
@@ -26,32 +25,30 @@ import {
   StyledHotestTimeContainer,
 } from "./style";
 import { BodyLine } from "../BodyLine/BodyLine";
-export const TheHotest = () => {
+import { ActionBar } from "../ActionBar/ActionBar";
+
+export const DetailsItem = () => {
   return (
-    <StyledHotestContent>
+    <StyledDetailsItem>
       <StyledBodyNavHead>Самое горячее</StyledBodyNavHead>
-      <BodyLine></BodyLine>
+      <BodyLine/>
       <StyledHotestContainer>
-
-
         <StyledHotestLeft>
-            <StyledHotestLableContent>
-                <StyledHotestStarts>
-                    <img src={bigstar} alt="" />
-                    <img src={bigstar} alt="" />
-                    <img src={bigstar} alt="" />
-                    <img src={bigstar} alt="" />
-                    <img src={bigstar} alt="" />
-                </StyledHotestStarts>
-                <StyledHotestLable>
-                    <StyledHotestLableGreen>Новинка</StyledHotestLableGreen>
-                    <StyledHotestLablePink>Акция</StyledHotestLablePink>
-                    <StyledHotestLableYellow>ХИТ</StyledHotestLableYellow>
-                </StyledHotestLable>
-            </StyledHotestLableContent>
+          <StyledHotestLableContent>
+            <StyledHotestStarts>
+              <img src={bigstar} alt="" />
+              <img src={bigstar} alt="" />
+              <img src={bigstar} alt="" />
+              <img src={bigstar} alt="" />
+              <img src={bigstar} alt="" />
+            </StyledHotestStarts>
+            <StyledHotestLable>
+              <StyledHotestLableGreen>Новинка</StyledHotestLableGreen>
+              <StyledHotestLablePink>Акция</StyledHotestLablePink>
+              <StyledHotestLableYellow>ХИТ</StyledHotestLableYellow>
+            </StyledHotestLable>
+          </StyledHotestLableContent>
         </StyledHotestLeft>
-
-
         <StyledHotestRight>
           <StyledHotestHeader>Трехместный диван Claudia</StyledHotestHeader>
           <StyledHotestPrice>
@@ -62,26 +59,22 @@ export const TheHotest = () => {
             Этот диван просто создан для большой семьи. Его потрясающая мягкость
             и большое пространство подарят море приятных ощущений. Ваши дети
             будут в восторге - на этой модели найдется местечко для веселых игр
-            даже для большой компании ... 
+            даже для большой компании ...
             <StyledHotestTextLink>
-            Подробнее
+              Подробнее
             </StyledHotestTextLink>
           </StyledHotestText>
           <StyledHotestAvalible>
             <StyledHotestAvalibleText>Имеется: 10</StyledHotestAvalibleText>
             <StyledHotestAvalibleText>Продано: 40</StyledHotestAvalibleText>
           </StyledHotestAvalible>
-          <StyledHotestLine></StyledHotestLine>
-
-            <StyledHotestTimeContainer>
-                <StyledHotestTill>
-
-                </StyledHotestTill>
-                
-            </StyledHotestTimeContainer>
-
+          <StyledHotestLine/>
+          <StyledHotestTimeContainer>
+            <StyledHotestTill></StyledHotestTill>
+            <ActionBar/>
+          </StyledHotestTimeContainer>
         </StyledHotestRight>
       </StyledHotestContainer>
-    </StyledHotestContent>
+    </StyledDetailsItem>
   );
 };
