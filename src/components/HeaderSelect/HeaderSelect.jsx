@@ -1,55 +1,45 @@
-import React from "react"
-import Select from 'react-select';
 import styled from 'styled-components';
 
+export const selectStyles = {
+  control: (provided) => ({
+    ...provided,
+    border: "none",
+    textAlign: "center",
+    background: "none",
+    borderColor: "#7721c1",
+  }),
 
-const options = [
-  { value: "Russian", label: "Русский" },
-  { value: "Uzbek", label: "Узбекский" },
-];
+  singleValue: (provided) => ({
+    ...provided,
+    color: "#7721c1",
+    fontWeight: "400",
+    fontSize: "13px",
+    lineHeight: "15px",
+    fontFamily: "Roboto",
+    appearance: "none",
+  }),
+
+  indicatorSeparator: (provided) => ({
+    ...provided,
+    display: "none",
+  }),
+
+  IndicatorsContainer: (provided) => ({
+    ...provided,
+    display: "none",
+  }),
+
+  placeholder: (provided) => ({
+    ...provided,
+    display: "none",
+  }),
+};
 
 
 
-export const HeaderSelect = () => {
-  const selectStyles = {
-    control: (provided) => ({
-      ...provided,
-      border: "none",
-      textAlign: "center",
-      background: "none",
-    }),
-
-    singleValue: (provided) => ({
-      ...provided,
-      color: "#7721c1",
-      fontWeight: "400",
-      fontSize: "13px",
-      lineHeight: "15px",
-      fontFamily: "Roboto",
-      appearance: "none",
-    }),
-
-    indicatorSeparator: (provided) => ({
-      ...provided,
-      display: "none",
-    }),
-  };
-
-  return (
-    <StyledHeaderSelect>
-      <Select options={options}
-        styles={selectStyles}
-        defaultValue={options[0]}
-        isMulti={false}
-      />
-    </StyledHeaderSelect>
-  )
-}
-
-const StyledHeaderSelect = styled.div`
+export const StyledHeaderSelect = styled.div`
   border: solid 0px;
 `;
-
 
 
 // const content = [
