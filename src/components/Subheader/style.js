@@ -13,7 +13,8 @@ const StyledSubheader = styled.div`
 `;
 
 const StyledSubheaderContainer = styled.div`
-  width: 1140px;
+  max-width: 1140px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin: auto;

@@ -1,23 +1,26 @@
 import React from 'react'
-import ArrowToDown from "../../assets/icons/arrow_to_down.svg";
-import { HeaderSelectTitle, StyledSubheader, StyledSubheaderBlock, StyledSubheaderContainer, StyledSubheaderElement, StyledSubheaderElementContainer, StyledSubheaderText, StyledSubheaderTextBold } from './style'
-import { SubheaderAuthorization } from '../SubheaderAuthorization/SubheaderAuthorization';
-import { HeaderSelect } from '../HeaderSelect/HeaderSelect';
+import { HeaderSelectTitle, StyledSubheader, StyledSubheaderBlock, StyledSubheaderContainer, StyledSubheaderElement } from './style'
+import { HeaderSelectAutorization } from '../HeaderSelect/HeaderSelectAutorization';
+import { HeaderSelectCurrency } from '../HeaderSelect/HeaderSelectCurrency';
+import { HeaderSelectLanguage } from '../HeaderSelect/HeaderSelectLanguage';
+import { HeaderSelectMap } from '../HeaderSelect/HeaderSelectMap';
 
 export const Subheader = () => {
   return (
     <StyledSubheader>
       <StyledSubheaderContainer>
-        <SubheaderAuthorization />
-        {/* <HeaderSelect /> */}
+        <StyledSubheaderElement>
+          <HeaderSelectAutorization />
+        </StyledSubheaderElement>
+        <HeaderSelectMap />
         <StyledSubheaderBlock>
           <StyledSubheaderElement>
             <HeaderSelectTitle>Язык</HeaderSelectTitle>
-            <HeaderSelect />
+            <HeaderSelectLanguage />
           </StyledSubheaderElement>
           <StyledSubheaderElement>
-          <HeaderSelectTitle>Валюта</HeaderSelectTitle>
-            <HeaderSelect />
+            <HeaderSelectTitle>Валюта</HeaderSelectTitle>
+            <HeaderSelectCurrency />
           </StyledSubheaderElement>
         </StyledSubheaderBlock>
       </StyledSubheaderContainer>
