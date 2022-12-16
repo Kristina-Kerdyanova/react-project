@@ -1,8 +1,9 @@
-.tab-menu button.active{
-    border: 3px solid #7721C1;
+.tab-menu button.active {
+  border: 3px solid #7721C1;
 }
-.tabcontent{
-    min-height: 500px;
-    border: none;
-    margin-top: 47px;
+
+.tabcontent {
+  min-height: 500px;
+  border: none;
+  margin-top: 47px;
 }

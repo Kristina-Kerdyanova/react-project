@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   StyledBodyNavEllements,
   StyledBodyNavHead,
@@ -6,24 +7,27 @@ import {
   StyledBodyNavText,
   StyledBodyNavWrapper,
 } from "./style";
+
 import "./style.css";
 import { BodyLine } from "../BodyLine/BodyLine";
-import { CardItem } from "../CardItem/CardItem";
+import { CardItemList } from "../CardItemList/CardItemList";
+
 export const BodyNavSelect = () => {
   const tabs = [
-    { title: "Диваны / Кровати", content: <CardItem></CardItem>},
+    { title: "Диваны / Кровати", content: <CardItemList /> },
     { title: "Двери", content: "Двери" },
     { title: "Окна", content: "Окна" },
     { title: "Мебeль", content: "Мебeль" },
     { title: "Натяжные потолки", content: "Натяжные потолки" },
   ];
 
-  const TabContent = ({ title, content }) => (
+  const TabContent = ({ content }) => (
     <div className="tabcontent">
-      <p>{content}</p>
+      <div>{content}</div>
     </div>
   );
-  const [active, setActive] = React.useState(null);
+
+  const [active, setActive] = useState(tabs[0]);
 
   const openTab = (event) => setActive(+event.target.dataset.index);
 
@@ -31,10 +35,10 @@ export const BodyNavSelect = () => {
     <StyledBodyNavWrapper>
       <StyledBodyNavText>
         <StyledBodyNavHead>Хиты продаж</StyledBodyNavHead>
-        <StyledBodyNavEllements className="tab-menu">
+        <StyledBodyNavEllements className="tab-menu ">
           {tabs.map((item, index) => (
             <StyledBodyNavSell
-              className={`tablinks ${index === active ? "active" : ""}`}
+              className={index === active ? "active" : null} 
               onClick={openTab}
               data-index={index}
             >
@@ -43,9 +47,7 @@ export const BodyNavSelect = () => {
           ))}
         </StyledBodyNavEllements>
       </StyledBodyNavText>
-    <BodyLine></BodyLine>
-      {/* <StyledBodyNavBorder></StyledBodyNavBorder> */}
-
+      <BodyLine />
       {tabs[active] && <TabContent {...tabs[active]} />}
     </StyledBodyNavWrapper>
   );
