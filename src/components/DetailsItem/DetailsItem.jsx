@@ -1,52 +1,48 @@
 import React from "react";
 import { StyledBodyNavHead } from "../BodyNavSelect/style";
-import bigstar from "../../assets/icons/big_star.svg"
+
 import {
+  ContainerActionBar,
+  ContainerLabels,
+  ContainerStock,
   StyledDetailsItem,
   StyledHotestAvalible,
   StyledHotestAvalibleText,
   StyledHotestContainer,
   StyledHotestHeader,
-  StyledHotestLable,
   StyledHotestLableContent,
-  StyledHotestLableGreen,
-  StyledHotestLablePink,
-  StyledHotestLableYellow,
   StyledHotestLeft,
   StyledHotestLine,
   StyledHotestPrice,
   StyledHotestPriceMain,
   StyledHotestPriceOld,
   StyledHotestRight,
-  StyledHotestStarts,
   StyledHotestText,
   StyledHotestTextLink,
-  StyledHotestTill,
   StyledHotestTimeContainer,
+  TitleStockTime,
 } from "./style";
+
 import { BodyLine } from "../BodyLine/BodyLine";
 import { ActionBar } from "../ActionBar/ActionBar";
+import { StockTime } from "../StockTime/StockTime";
+import { GreenLabel, PinkLabel, YellowLabel } from "../Label/Label";
+import { Rating } from "../Rating/Rating";
 
 export const DetailsItem = () => {
   return (
     <StyledDetailsItem>
       <StyledBodyNavHead>Самое горячее</StyledBodyNavHead>
-      <BodyLine/>
+      <BodyLine />
       <StyledHotestContainer>
         <StyledHotestLeft>
           <StyledHotestLableContent>
-            <StyledHotestStarts>
-              <img src={bigstar} alt="" />
-              <img src={bigstar} alt="" />
-              <img src={bigstar} alt="" />
-              <img src={bigstar} alt="" />
-              <img src={bigstar} alt="" />
-            </StyledHotestStarts>
-            <StyledHotestLable>
-              <StyledHotestLableGreen>Новинка</StyledHotestLableGreen>
-              <StyledHotestLablePink>Акция</StyledHotestLablePink>
-              <StyledHotestLableYellow>ХИТ</StyledHotestLableYellow>
-            </StyledHotestLable>
+            <Rating/>
+            <ContainerLabels>
+              <GreenLabel />
+              <PinkLabel />
+              <YellowLabel />
+            </ContainerLabels>
           </StyledHotestLableContent>
         </StyledHotestLeft>
         <StyledHotestRight>
@@ -68,10 +64,15 @@ export const DetailsItem = () => {
             <StyledHotestAvalibleText>Имеется: 10</StyledHotestAvalibleText>
             <StyledHotestAvalibleText>Продано: 40</StyledHotestAvalibleText>
           </StyledHotestAvalible>
-          <StyledHotestLine/>
+          <StyledHotestLine />
           <StyledHotestTimeContainer>
-            <StyledHotestTill></StyledHotestTill>
-            <ActionBar/>
+            <TitleStockTime>До конца</TitleStockTime>
+            <ContainerStock>
+              <StockTime />
+              <ContainerActionBar>
+                <ActionBar />
+              </ContainerActionBar>
+            </ContainerStock>
           </StyledHotestTimeContainer>
         </StyledHotestRight>
       </StyledHotestContainer>
