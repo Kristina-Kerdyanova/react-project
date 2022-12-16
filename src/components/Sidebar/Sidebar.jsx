@@ -1,5 +1,5 @@
 import React from 'react'
-import Burger from "../../assets/icons/burger.svg";
+import Burger from "../../assets/icons/burger_white.svg";
 import Comparison from "../../assets/icons/comparison.svg";
 import Favorite from "../../assets/icons/favorite.svg";
 import Calculator from "../../assets/icons/calculator.svg";
@@ -34,7 +34,7 @@ export const Sidebar = () => {
         <ItemSidebarBtn>
           <img src={ArrowToUp} alt="" />
         </ItemSidebarBtn>
-        </ListSidebar> 
+      </ListSidebar>
     </StyledSidebar>
   )
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { ButtonNavigation, ButtonTabNavigation, ButtonTitle, CategoriesList, CategoriesListItem, ContainerBody, ContainerContent, ContainerLink, ContainerList, ContainerListItem, ContainerNavigation, ContainerNavigationBar, ContainerTabNavigation, ContainerTabsContent, LinkItem, ListLink, ListText, StyledLink, StyledNavigationBar, TabItem, TextLink, TitleLink } from "./style";
 import "./style.css";
 import Lamp from "../../assets/icons/lamp.svg"
@@ -11,6 +11,8 @@ import Sofas from "../../assets/icons/sofas.svg"
 import Lamp_small from "../../assets/icons/lamp_small.svg"
 import Doors from "../../assets/icons/doors.svg"
 import Window_small from "../../assets/icons/window_small.svg"
+import styled from "styled-components";
+import { Sidebar } from "../Sidebar/Sidebar";
 
 
 export const NavigationBar = () => {
@@ -28,7 +30,7 @@ export const NavigationBar = () => {
     { title: "Жалюзи/Ролеты", img: Blinds },
     { title: "Мебель", img: Chairs },
     { title: "Кованые изделия", img: Forged_products },
-    { title: "Другие", img: "" },
+    { title: "Другие", img: null },
   ]
 
   const calculator = [
@@ -42,7 +44,7 @@ export const NavigationBar = () => {
     </div>
   );
 
-  const [active, setActive] = React.useState(null);
+  const [active, setActive] = useState(tabs[0]);
 
   const openTab = event => setActive(+event.target.dataset.index);
 
@@ -57,7 +59,7 @@ export const NavigationBar = () => {
           <TabItem className="tab">
             {tabs.map((item, index) => (
               <ButtonTabNavigation
-                className={`tablinks ${index === active ? "active" : ""}`}
+                className={index === active ? "active" : null}
                 onClick={openTab}
                 data-index={index}>
                 {item.title}
@@ -95,7 +97,16 @@ export const NavigationBar = () => {
           {tabs[active] && <TabContent {...tabs[active]} />}
         </ContainerTabsContent>
       </ContainerBody>
+      <StyledSidebar>
+        <Sidebar />
+      </StyledSidebar>
     </ContainerNavigation>
   )
 }
 
+
+const StyledSidebar = styled.div`
+  position: fixed;
+  z-index: 3;
+  left: 90%;
+`;
