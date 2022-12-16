@@ -23,74 +23,17 @@ const StyledHotestLeft = styled.div`
   flex-direction: column;
   width: 45%;
 `;
+
 const StyledHotestLableContent = styled.div`
+  max-width: 420px;
   width: 100%;
   justify-content: space-between;
   display: flex;
   align-items: flex-start;
 `;
+
 const StyledHotestStarts = styled.div``;
-const StyledHotestLable = styled.div`
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 26px;
-  color: #ffffff;
-`;
-const StyledHotestLablePink = styled.p`
-  background: rgba(255, 0, 199, 0.84);
-  box-shadow: inset 0px 4px 33px rgba(0, 0, 0, 0.28);
-  border-radius: 19px;
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  min-width: 107px;
-  height: 40px;
-  width: 100%;
-`;
-const StyledHotestLableGreen = styled.p`
-  background: #4bc121;
-  box-shadow: inset 0px 4px 33px rgba(0, 0, 0, 0.28);
-  border-radius: 19px;
-  justify-content: center;
-  align-items: center;
-  min-width: 107px;
-  width: 100%;
-  height: 40px;
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 26px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-const StyledHotestLableYellow = styled.p`
-  background: #f79e1b;
-  box-shadow: inset 0px 4px 33px rgba(0, 0, 0, 0.28);
-  border-radius: 19px;
-  align-items: center;
-  min-width: 107px;
-  width: 100%;
-  height: 40px;
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 26px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+
 const StyledHotestRight = styled.div`
   display: flex;
   flex-direction: column;
@@ -98,6 +41,7 @@ const StyledHotestRight = styled.div`
   position: relative;
   right: 0;
 `;
+
 const StyledHotestHeader = styled.h2`
   font-family: "Roboto";
   font-weight: 700;
@@ -105,6 +49,7 @@ const StyledHotestHeader = styled.h2`
   line-height: 42px;
   color: #7721c1;
 `;
+
 const StyledHotestPrice = styled.div`
   display: flex;
   gap: 13px;
@@ -146,10 +91,12 @@ const StyledHotestTextLink = styled.a`
   text-decoration-line: underline;
   color: #7721c1;
 `;
+
 const StyledHotestAvalible = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
 const StyledHotestAvalibleText = styled.p`
   font-family: "Roboto";
   font-weight: 700;
@@ -167,11 +114,14 @@ const StyledHotestLine = styled.div`
   height: 15px;
   margin-bottom: 16px;
 `;
+
 const StyledHotestTimeContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
 `;
+
 const StyledHotestTill = styled.div`
   display: flex;
   flex-direction: column;
@@ -197,16 +147,44 @@ const StyledHotestTimerText = styled.p`
   color: #7721c1;
 `;
 
-const StyledHotestPrefer = styled.div``;
+const ContainerStock = styled.div`
+  display: flex;
+`;
+
+const TitleStockTime = styled.p`
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+  margin-bottom: 9px;
+`;
+
+const ContainerActionBar = styled.div`
+  max-width: 272px;
+  width: 100%;
+`;
+
+const ContainerLabels = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 233px;
+  &:last-child {
+    justify-content: center;
+  }
+`;
 
 export {
+  ContainerLabels,
+  ContainerActionBar,
+  ContainerStock,
+  TitleStockTime,
   StyledHotestContainer,
   StyledHotestAvalible,
   StyledHotestAvalibleText,
   StyledHotestHeader,
-  StyledHotestLable,
   StyledHotestLeft,
-  StyledHotestPrefer,
   StyledHotestPrice,
   StyledHotestPriceMain,
   StyledHotestPriceOld,
@@ -221,8 +199,5 @@ export {
   StyledHotestLine,
   StyledHotestTimeContainer,
   StyledHotestLableContent,
-  StyledHotestLableGreen,
-  StyledHotestLablePink,
-  StyledHotestLableYellow,
   StyledHotestStarts,
 };
