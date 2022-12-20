@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-project/static/css/main.70f9bdc8.css",
-    "main.js": "/react-project/static/js/main.ec04c671.js",
+    "main.js": "/react-project/static/js/main.efae868f.js",
     "static/media/girl.svg": "/react-project/static/media/girl.0b9860e09189b56d78f905c30353c692.svg",
     "static/media/veka.svg": "/react-project/static/media/veka.587034a18075e0a39879a72d184b5341.svg",
     "static/media/wds.svg": "/react-project/static/media/wds.d593fb9b1bfd65033a63761f265c27c4.svg",
@@ -50,10 +50,10 @@
     "static/media/burger.svg": "/react-project/static/media/burger.0adbb7f6514736df673aa42f84911dda.svg",
     "static/media/plus.svg": "/react-project/static/media/plus.3efedce930231546db8865f73ada3261.svg",
     "main.70f9bdc8.css.map": "/react-project/static/css/main.70f9bdc8.css.map",
-    "main.ec04c671.js.map": "/react-project/static/js/main.ec04c671.js.map"
+    "main.efae868f.js.map": "/react-project/static/js/main.efae868f.js.map"
   },
   "entrypoints": [
     "static/css/main.70f9bdc8.css",
-    "static/js/main.ec04c671.js"
+    "static/js/main.efae868f.js"
   ]
 }
