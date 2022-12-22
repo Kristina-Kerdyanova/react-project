@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-const StyledSidebar = styled.div`
-  
-`;
+const StyledSidebar = styled.div``;
 
 const ListSidebar = styled.ul``;
 
@@ -18,4 +16,6 @@ const ItemSidebarBtn = styled.button`
   border: none;
 `;
 
-export { StyledSidebar, ListSidebar, ItemSidebarBtn };
+const ImageSideBar = styled.img``;
+
+export { StyledSidebar, ListSidebar, ItemSidebarBtn, ImageSideBar };

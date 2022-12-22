@@ -6,34 +6,28 @@ import Calculator from "../../assets/icons/calculator.svg";
 import User from "../../assets/icons/user_white.svg";
 import TechnicalSupport from "../../assets/icons/technical_support.svg";
 import ArrowToUp from "../../assets/icons/arrow_to_up.svg";
-import { ItemSidebarBtn, ListSidebar, StyledSidebar } from './style';
+import { ImageSideBar, ItemSidebarBtn, ListSidebar, StyledSidebar } from './style';
 
+const options = [
+  { img: Burger, button: "Все категории" },
+  { img: Comparison, button: "Сравнение" },
+  { img: Favorite, button: "Желаемое" },
+  { img: Calculator, button: "Калькуляторы" },
+  { img: User, button: "" },
+  { img: TechnicalSupport, button: "Тех. поддержка" },
+  { img: ArrowToUp, button: "" },
+]
 
 export const Sidebar = () => {
+
   return (
     <StyledSidebar>
       <ListSidebar>
-        <ItemSidebarBtn>
-          <img src={Burger} alt="" />
-        </ItemSidebarBtn>
-        <ItemSidebarBtn>
-          <img src={Comparison} alt="" />
-        </ItemSidebarBtn>
-        <ItemSidebarBtn>
-          <img src={Favorite} alt="" />
-        </ItemSidebarBtn>
-        <ItemSidebarBtn>
-          <img src={Calculator} alt="" />
-        </ItemSidebarBtn>
-        <ItemSidebarBtn>
-          <img src={User} alt="" />
-        </ItemSidebarBtn>
-        <ItemSidebarBtn>
-          <img src={TechnicalSupport} alt="" />
-        </ItemSidebarBtn>
-        <ItemSidebarBtn>
-          <img src={ArrowToUp} alt="" />
-        </ItemSidebarBtn>
+        {options.map((item) => (
+          <ItemSidebarBtn>
+            <ImageSideBar src={item.img} alt="" />
+          </ItemSidebarBtn>
+        ))}
       </ListSidebar>
     </StyledSidebar>
   )
