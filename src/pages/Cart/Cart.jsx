@@ -1,9 +1,9 @@
 import React from 'react'
 import Close from "../../assets/icons/close.svg";
 import CartWhite from "../../assets/icons/cart_white.svg";
-import { ModalWinwowContainer, ModalWinwowHeader, ModalWinwowTitleHeader } from '../ModalWindow/style'
-import { ButtonClose } from '../Sign/style';
-import { CartItem } from '../CartItem/CartItem';
+import { ModalWinwowContainer, ModalWinwowHeader, ModalWinwowTitleHeader } from '../../components/ModalWindow/style'
+import { ButtonClose } from '../../components/Sign/style';
+import { CartItem } from '../../components/CartItem/CartItem';
 import { AddCartImage, AddCartText, ContainerContentTitle, FooterContentText, FooterContentTitle, ImageModalWindow, ListCardItem, ModalWindowContainerContent, ModalWindowFooter, ModalWindowFooterContent, StyledAddCard } from './style';
 
 export const Cart = () => {
