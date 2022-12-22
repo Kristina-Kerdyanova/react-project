@@ -16,12 +16,21 @@ const ContainerCartItem = styled.li`
 const ContainerDetailsCardItem = styled.div`
   display: flex;
   justify-content: space-between;
-
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
 `;
 
-const TitleDetailCardItem = styled.h4``;
+const TitleDetailCardItem = styled.p`
+  color: #7721c1;
+`;
 
-const ContentDetailCardItem = styled.p``;
+const ContentDetailCardItem = styled.p`
+  color: #000000;
+`;
 
 const ContainerContentCartItem = styled.div`
   display: flex;
@@ -31,8 +40,14 @@ const ContainerContentCartItem = styled.div`
 `;
 
 const TitleCardItem = styled.h3`
-text-align: center;
-margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
 `;
 
 const ImageCartItem = styled.img``;
