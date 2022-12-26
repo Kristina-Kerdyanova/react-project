@@ -22,11 +22,20 @@ const CategoriesSidebarList = styled.ul``;
 
 const CategoriesSidebarItem = styled.li``;
 
-const CategoriesSidebarContainerInput = styled.div``;
-
+const CategoriesSidebarContainerInput = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+`;
 
 const CategoriesSidebarInput = styled.input`
   margin-right: 16px;
+  width: 25px;
+  height: 25px;
+  background: #7721c1;
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  /* display: none; */
 `;
 
 const CategoriesSidebarLabel = styled.label`
@@ -36,7 +45,15 @@ const CategoriesSidebarLabel = styled.label`
   font-size: 21px;
   line-height: 25px;
   color: #7721c1;
-  margin-bottom: 16px;
+  /* &::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #7721c1;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+  } */
 `;
 
 export {
